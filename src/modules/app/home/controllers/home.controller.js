@@ -18,5 +18,7 @@ module.exports = /*@ngInject*/
         return;
       }
       vm.images = angular.copy(images).slice(0, index += 6);
+      console.log(vm.images, 'vm.images !!');
     };
+
   };

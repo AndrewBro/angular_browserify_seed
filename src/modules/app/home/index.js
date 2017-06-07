@@ -1,6 +1,5 @@
 'use strict';
 
-
 require('ng-infinite-scroll');
 
 module.exports =

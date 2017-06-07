@@ -6,8 +6,7 @@ module.exports = /*ngInject*/
       .state('image', {
         url: '/image/:id',
         templateUrl: 'app/image/templates/image.html',
-        controller:  require('./controllers/image.controller'),
+        controller: require('./controllers/image.controller'),
         controllerAs: 'vmImg'
-
       });
   };

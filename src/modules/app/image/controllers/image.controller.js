@@ -8,5 +8,6 @@ module.exports = /*@ngInject*/
     imagesService.getImageById($stateParams.id)
       .then(function (resp) {
         vm.image = resp.data;
+        console.log(vm.image, 'images Service');
       });
   };
