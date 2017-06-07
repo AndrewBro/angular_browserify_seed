@@ -10,19 +10,19 @@ module.exports = /*@ngInject*/
 
     imagesService.getAlbum($stateParams.id)
       .then(function (resp) {
-        vma.albums = resp.data;
-        console.log(vma.albums, 'albums Service');
-        vma.addMoreImages();
+        albums = resp.data;
+        // console.log(vma.albumId , 'vma');
+        // console.log(albums.albumId, 'albums.albumId !!');
+        vma.addMoreAlbums();
       });
 
-
-
-    vma.addMoreImages = function () {
+    vma.addMoreAlbums = function () {
       if (!albums) {
         return;
       }
       vma.albums = angular.copy(albums).slice(0, indexx += 6);
-      console.log(vma.albums, 'vma.albums !!')
-    };
+      console.log(vma.albums.albumId, 'vma.albums.albumId !!');
+      console.log(vma.albums.id, 'vma.albums.id !!');
 
+    };
   };

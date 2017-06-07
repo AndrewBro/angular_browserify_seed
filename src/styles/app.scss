@@ -8,9 +8,10 @@ body {
   max-width: 960px;
   margin: auto;
 
-  /* navigation */
+  /* navigation styles */
   nav {
-    background: #DAE2F8;  /* fallback for old browsers */
+    background: #DAE2F8;
+    margin-bottom: 2%;
     ul {
       display: flex;
       flex-direction: row;
@@ -29,34 +30,53 @@ body {
       }
     }
   }
+  hr {
+    margin-bottom: 2%;
+  }
 
-  /* ui-view css */
+  /* ui-view styles */
   .container {
 
-    .albums {
+    .homeImages {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      .album {
+      .homeImage {
         border: 0.2px solid #C0C0C0;
         width: 32%;
         margin: 5px 0;
+        padding: 0;
         transition: 2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         a {
           text-decoration: initial;
           img {
             max-width: 100%;
           }
-          h3 {
-            font-weight: 400;
-            text-transform: uppercase;
-            color: #444444;
-            padding: 10px;
-            text-align: center;
-          }
         }
+        h3 {
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #444444;
+          text-align: center;
+          padding: 0 10px;
+        }
+       span {
+         display: flex;
+         justify-content: center;
+         margin-bottom: 20px;
+         a img{
+           max-width: 3rem;
+         }
+         a img:hover {
+           transition: 0.5s;
+         }
+       }
+
       }
-      .album:hover {
+      .homeImage img:hover {
         transition: 1s;
         opacity: 0.4;
       }
@@ -79,6 +99,7 @@ body {
 
   }
 
+  /* footer styles */
   .footer {
     background: #C04848;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #480048, #C04848);  /* Chrome 10-25, Safari 5.1-6 */
@@ -113,26 +134,25 @@ body {
     }
   }
 
-  @media (max-width: 1400px) {
-
+  /* media request styles */
+  @media (max-width: 1000px) {
     .container {
-      .albums {
-        .album {
+      .homeImages {
+        .homeImage {
           width: 49%;
           img {
             max-width: 100%;
           }
-
         }
       }
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 400px) {
 
     .container {
-      .albums {
-        .album {
+      .homeImages {
+        .homeImage {
           width: 100%;
           img {
             max-width: 100%;

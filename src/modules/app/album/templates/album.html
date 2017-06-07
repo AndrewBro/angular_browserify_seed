@@ -1,10 +1,13 @@
+<div class="homeImages">
+  <div ng-repeat="album in vma.albums" class="homeImage">
 
-<div ng-repeat="album in vma.albums" class="album">
+      <img ng-src="{{album.url}}"
+           alt="{{album.title}}"
+           title="{{album.title}}">
 
-    <img ng-src="{{album.thumbnailUrl}}"
-         alt="{{album.title}}"
-         title="{{album.title}}">
+      <h3>ALBUM №{{album.albumId}}</h3>
+      <h3>{{album.title}}</h3>
 
-    <h3>{{album.albumId}}</h3>
+  </div>
 
 </div>

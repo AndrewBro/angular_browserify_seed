@@ -1,15 +1,20 @@
 <!--<p ng-hide="vm.images">Loading...</p>-->
 
-<div infinite-scroll="vm.addMoreImages()" infinite-scroll-distance="1" ng-if="vm.images" class="albums">
-  <div ng-repeat="image in vm.images" class="album">
+<div infinite-scroll="vm.addMoreImages()" infinite-scroll-distance="1" ng-if="vm.images" class="homeImages">
+
+  <div ng-repeat="image in vm.images" class="homeImage">
     <a ui-sref="image({id: image.id})">
       <img ng-src="{{image.url}}"
            alt="{{image.title}}"
            title="{{image.title}}">
-
-      <h3>{{image.title}}</h3>
-
     </a>
-    <!--<a ui-sref="album({id: album.id})">WWWWWWWW</a>-->
+    <h3>{{image.title}}</h3>
+
+    <span>
+      <a ui-sref="album({id: image.id})" >
+        <img src="../../../../assets/img/album.png" alt="" >
+      </a>
+    </span>
+
   </div>
 </div>

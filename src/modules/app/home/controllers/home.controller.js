@@ -2,6 +2,7 @@
 
 module.exports = /*@ngInject*/
   function barController($scope, imagesService) {
+
     var vm = this;
     var images;
     var index = 0;
