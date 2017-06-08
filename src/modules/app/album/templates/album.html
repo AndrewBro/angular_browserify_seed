@@ -1,12 +1,16 @@
-<div class="homeImages">
+<h1>ALBUM № {{vma.albums[0].albumId}}</h1>
+
+<div class="homeImages" infinite-scroll="vma.addMoreAlbums()" infinite-scroll-distance="1" ng-if="vma.albums">
+
   <div ng-repeat="album in vma.albums" class="homeImage">
 
-      <img ng-src="{{album.url}}"
+      <img ng-src="{{album.thumbnailUrl}}"
            alt="{{album.title}}"
-           title="{{album.title}}">
+           title="{{album.title}}"
+            style="width: 100%; height: auto">
 
-      <h3>ALBUM №{{album.albumId}}</h3>
-      <h3>{{album.title}}</h3>
+    <h3>{{album.title}}</h3>
+    <h3>album {{album.albumId}}</h3>
 
   </div>
 
